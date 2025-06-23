@@ -4,7 +4,8 @@ import { Router } from "express"
 const router = Router()
 
 router.get('/:date', (req: Request, res:Response) => {
-    res.send(`Requested picture for date ${req.params.date}`)
+    console.log(`Answering with: Requested picture for date ${req.params.date}`)
+    res.json({msg: `Requested picture for date ${req.params.date}`})
 })
 
 export default router
