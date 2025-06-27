@@ -13,7 +13,6 @@ function PictureOfTheDay(props: POTDProps){
     {
         props.date = Date.now()
     }
-    let dateValue = new Date(props.date)
 
     return (
         <div id="potd">
