@@ -1,10 +1,7 @@
 import express from "express"
-import dotenv from "dotenv"
 import router from "./potdRoutes.js"
 import type { Request, Response } from "express"
 import cors from 'cors'
-
-dotenv.config()
 
 const app = express()
 
