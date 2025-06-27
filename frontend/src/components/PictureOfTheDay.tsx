@@ -1,3 +1,5 @@
+import React from "react"
+
 let image: HTMLImageElement | null = null
 let date: Date = new Date()
 
@@ -6,11 +8,15 @@ function PictureOfTheDay(props: POTDProps){
     {
         props.date = Date.now()
     }
+    let dateValue = new Date(props.date)
 
-    return `<div class="">
-        <p>Picture for ${props.date} goes here</p>
-        <button onclick="${getPicture(new Date())}">Test getPicture</button>
-    </div>`
+    return (
+        <div id="potd">
+            <p>Picture for {dateValue.toISOString()} goes here</p>
+            <button onClick={() => getPicture(new Date(props.date))}>Test getPicture</button>
+        </div>
+    )
+    
 }
 
 async function getPicture(dateToGet: Date){
